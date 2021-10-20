@@ -10,7 +10,7 @@
             <td>Actions</td>
         </tr>
         @foreach($posts as $post)
-        @php($i=1)    
+        <!-- @php($i=1)     -->
         <tr>
                 <td>{{$loop->iteration}}</td>
                 <td>{{$post['title']}}</td>
@@ -23,4 +23,4 @@
         @endforeach
     </table>
 </form>
-{{ $posts->links()+$i }}
+{{ $posts->links()}}
