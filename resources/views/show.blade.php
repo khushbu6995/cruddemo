@@ -9,10 +9,11 @@
             <td>Description</td>
             <td>Actions</td>
         </tr>
-        @foreach($posts as $post)
-        <!-- @php($i=1)     -->
+       
+        @foreach($posts as $key=>$post)
+         
         <tr>
-                <td>{{$loop->iteration}}</td>
+                <td>{{$posts->firstItem() + $key}}</td>
                 <td>{{$post['title']}}</td>
                 <td>{{$post['description']}}</td>
                 <td>
@@ -23,4 +24,10 @@
         @endforeach
     </table>
 </form>
-{{ $posts->links()}}
+{{ $posts->links() }}
+<style>
+    .w-5
+    {
+        display: none;
+    }
+</style>
