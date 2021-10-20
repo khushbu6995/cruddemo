@@ -9,7 +9,7 @@ class crudController extends Controller
 {
     public function index()
     {
-        $posts = Post::paginate(10);
+        $posts = Post::paginate(5);
         return view('show', compact('posts'));
     }
     public function create()
